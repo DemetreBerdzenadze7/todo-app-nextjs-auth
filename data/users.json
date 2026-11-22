@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "name": "Admin",
+    "email": "admin@todo.ge",
+    "password": "1234",
+    "role": "ADMIN"
+  },
+  {
+    "id": "2",
+    "name": "Giorgi",
+    "email": "user@todo.ge",
+    "password": "123",
+    "role": "USER"
+  }
+]
