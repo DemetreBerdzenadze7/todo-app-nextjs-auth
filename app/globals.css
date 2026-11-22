@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
+/* ==========================================================
+   Design tokens — light (default)
+   ========================================================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f5f6fa;
+  --surface: #ffffff;
+  --surface-muted: #eef0f6;
+  --border: #e2e5ee;
+  --text: #171a26;
+  --text-muted: #6b7185;
+  --primary: #5b5bd6;
+  --primary-hover: #4a4ac4;
+  --primary-soft: #ececfd;
+  --on-primary: #ffffff;
+  --success: #1f9d6b;
+  --success-soft: #e3f6ee;
+  --warning: #c27c0e;
+  --warning-soft: #fdf2dc;
+  --danger: #d6455b;
+  --danger-soft: #fde8eb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #0f111a;
+    --surface: #181b27;
+    --surface-muted: #212536;
+    --border: #2b3044;
+    --text: #eceef5;
+    --text-muted: #9298ad;
+    --primary: #8585f0;
+    --primary-hover: #9a9af5;
+    --primary-soft: #262a4d;
+    --on-primary: #0f111a;
+    --success: #3ccf93;
+    --success-soft: #16302a;
+    --warning: #f0b14a;
+    --warning-soft: #33291a;
+    --danger: #f2738a;
+    --danger-soft: #3a1f27;
   }
 }
 
+/* ==========================================================
+   Tailwind theme (utility classes: bg-surface, text-muted …)
+   ========================================================== */
+@theme inline {
+  /* Colors */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-soft);
+  --color-on-primary: var(--on-primary);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+
+  /* Fonts */
+  --font-sans: var(--font-georgian), var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+@theme {
+  /* Font sizes */
+  --text-caption: 0.75rem;
+  --text-body: 0.9375rem;
+  --text-title: 1.125rem;
+  --text-heading: 1.5rem;
+  --text-display: 2rem;
+
+  /* Radius */
+  --radius-card: 1rem;
+  --radius-control: 0.75rem;
+
+  /* Layout */
+  --container-page: 72rem;
+  --spacing-gutter: 1rem;
+  --spacing-gutter-tablet: 2rem;
+  --spacing-header: 4rem;
+
+  /* Breakpoints */
+  --breakpoint-tablet: 48rem;
+  --breakpoint-desktop: 64rem;
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px rgb(16 20 40 / 0.04), 0 4px 16px rgb(16 20 40 / 0.05);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
