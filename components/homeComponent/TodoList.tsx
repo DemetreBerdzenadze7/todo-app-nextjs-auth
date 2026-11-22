@@ -11,7 +11,6 @@ type TodoListProps = {
 
 export type Filter = "All" | "Active" | "Completed";
 
-// Empty-state text for each filter
 const EMPTY_MESSAGES: Record<Filter, { title: string; text: string }> = {
   All: { title: "No tasks yet", text: "Add your first task above to get started." },
   Active: { title: "No active tasks", text: "You're all caught up — nice work!" },

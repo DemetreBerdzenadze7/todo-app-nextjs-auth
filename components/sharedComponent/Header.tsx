@@ -8,12 +8,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-10 border-b border-border bg-surface/90 backdrop-blur">
       <div className="mx-auto flex h-header max-w-page items-center justify-between gap-4 px-gutter tablet:px-gutter-tablet">
-        {/* Logo */}
         <Link href="/">
           <Logo />
         </Link>
 
-        {/* Nav + user (needs session → loads inside Suspense) */}
         <Suspense fallback={<Skeleton className="h-9 w-40 rounded-control" />}>
           <HeaderContent />
         </Suspense>

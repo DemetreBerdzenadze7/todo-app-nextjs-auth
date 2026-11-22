@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-/* ==========================================================
-   Design tokens — light (default)
-   ========================================================== */
 :root {
   --bg: #f5f6fa;
   --surface: #ffffff;
@@ -22,7 +19,6 @@
   --danger-soft: #fde8eb;
 }
 
-/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f111a;
@@ -44,11 +40,7 @@
   }
 }
 
-/* ==========================================================
-   Tailwind theme (utility classes: bg-surface, text-muted …)
-   ========================================================== */
 @theme inline {
-  /* Colors */
   --color-bg: var(--bg);
   --color-surface: var(--surface);
   --color-surface-muted: var(--surface-muted);
@@ -66,34 +58,28 @@
   --color-danger: var(--danger);
   --color-danger-soft: var(--danger-soft);
 
-  /* Fonts */
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
 
 @theme {
-  /* Font sizes */
   --text-caption: 0.75rem;
   --text-body: 0.9375rem;
   --text-title: 1.125rem;
   --text-heading: 1.5rem;
   --text-display: 2rem;
 
-  /* Radius */
   --radius-card: 1rem;
   --radius-control: 0.75rem;
 
-  /* Layout */
   --container-page: 72rem;
   --spacing-gutter: 1rem;
   --spacing-gutter-tablet: 2rem;
   --spacing-header: 4rem;
 
-  /* Breakpoints */
   --breakpoint-tablet: 48rem;
   --breakpoint-desktop: 64rem;
 
-  /* Shadows */
   --shadow-card: 0 1px 2px rgb(16 20 40 / 0.04), 0 4px 16px rgb(16 20 40 / 0.05);
 }
 

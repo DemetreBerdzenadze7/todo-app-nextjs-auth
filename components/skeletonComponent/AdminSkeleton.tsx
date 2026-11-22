@@ -6,14 +6,12 @@ const card = "rounded-card border border-border bg-surface shadow-card";
 export default function AdminSkeleton() {
   return (
     <main className="mx-auto w-full max-w-page flex-1 px-gutter py-6 tablet:px-gutter-tablet tablet:py-10">
-      {/* Title */}
       <section className="mb-6 flex flex-col gap-3 tablet:mb-8">
         <Skeleton className="h-6 w-16 rounded-full" />
         <Skeleton className="h-8 w-48 tablet:h-10 tablet:w-64" />
         <Skeleton className="h-4 w-56" />
       </section>
 
-      {/* Stats */}
       <section className="mb-6 grid grid-cols-2 gap-3 tablet:grid-cols-4 tablet:gap-4">
         {Array.from({ length: 4 }).map((_, i) => (
           <div key={i} className={`${card} flex flex-col gap-3 p-3 tablet:p-5`}>
@@ -26,7 +24,6 @@ export default function AdminSkeleton() {
       <div className="grid gap-6 desktop:grid-cols-[1fr_24rem] desktop:items-start">
         <TodoListSkeleton rows={5} />
 
-        {/* Users */}
         <section className={`${card} p-4 tablet:p-5`}>
           <Skeleton className="mb-4 h-6 w-20" />
           <ul className="flex flex-col gap-2">

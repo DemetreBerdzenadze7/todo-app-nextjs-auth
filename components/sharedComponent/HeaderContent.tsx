@@ -11,7 +11,6 @@ export default async function HeaderContent() {
 
   return (
     <>
-      {/* Nav (tablet+) */}
       <nav className="hidden items-center gap-1 tablet:flex">
         <Link href="/" className="rounded-control bg-primary-soft px-3 py-2 text-body font-medium text-primary">
           My tasks
@@ -26,7 +25,6 @@ export default async function HeaderContent() {
         )}
       </nav>
 
-      {/* User */}
       <div className="flex items-center gap-3">
         <div className="hidden text-right desktop:block">
           <p className="text-body font-semibold leading-tight">{name}</p>

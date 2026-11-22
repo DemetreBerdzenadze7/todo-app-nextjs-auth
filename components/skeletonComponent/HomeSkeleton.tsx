@@ -6,7 +6,6 @@ const card = "rounded-card border border-border bg-surface shadow-card";
 export default function HomeSkeleton() {
   return (
     <main className="mx-auto w-full max-w-page flex-1 px-gutter py-6 tablet:px-gutter-tablet tablet:py-10">
-      {/* Greeting */}
       <section className="mb-6 flex flex-col gap-2 tablet:mb-8">
         <Skeleton className="h-4 w-28" />
         <Skeleton className="h-8 w-48 tablet:h-10 tablet:w-64" />
@@ -14,7 +13,6 @@ export default function HomeSkeleton() {
 
       <div className="grid gap-6 desktop:grid-cols-[1fr_20rem] desktop:items-start">
         <div className="flex flex-col gap-6">
-          {/* Stats */}
           <section className="grid grid-cols-3 gap-3 tablet:gap-4">
             {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className={`${card} flex flex-col gap-3 p-3 tablet:p-5`}>
@@ -24,7 +22,6 @@ export default function HomeSkeleton() {
             ))}
           </section>
 
-          {/* Add todo */}
           <section className={`${card} flex flex-col gap-3 p-4 tablet:flex-row tablet:p-5`}>
             <Skeleton className="h-12 flex-1 rounded-control" />
             <Skeleton className="h-12 rounded-control tablet:w-32" />
@@ -33,7 +30,6 @@ export default function HomeSkeleton() {
           <TodoListSkeleton />
         </div>
 
-        {/* Sidebar (desktop) */}
         <aside className="flex flex-col gap-6">
           <section className={`${card} flex flex-col gap-3 p-5`}>
             <Skeleton className="h-5 w-24" />

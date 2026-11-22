@@ -8,9 +8,10 @@ type TodoItemProps = {
   title: string;
   date: string;
   done: boolean;
+  owner?: string;
 };
 
-export default function TodoItem({ id, title, date, done }: TodoItemProps) {
+export default function TodoItem({ id, title, date, done, owner }: TodoItemProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [draft, setDraft] = useState(title);
   const [error, setError] = useState("");
@@ -29,7 +30,6 @@ export default function TodoItem({ id, title, date, done }: TodoItemProps) {
   };
 
   const saveEdit = () => {
-    // Nothing changed → just close
     if (draft.trim() === title) return cancelEditing();
 
     startTransition(async () => {
@@ -101,10 +101,8 @@ export default function TodoItem({ id, title, date, done }: TodoItemProps) {
     );
   }
 
-  // ---------- View mode ----------
   return (
     <li className="group flex items-center gap-3 rounded-control border border-border bg-surface px-4 py-3 transition-colors hover:border-primary/40">
-      {/* Toggle done */}
       <button
         type="button"
         onClick={() => toggleDone(id)}
@@ -140,7 +138,15 @@ export default function TodoItem({ id, title, date, done }: TodoItemProps) {
         >
           {title}
         </p>
-        <p className="text-caption text-muted">{date}</p>
+        <p className="flex items-center gap-1.5 text-caption text-muted">
+          {owner && (
+            <>
+              <span className="font-medium text-primary">{owner}</span>
+              <span aria-hidden>·</span>
+            </>
+          )}
+          <span>{date}</span>
+        </p>
       </div>
 
       <div className="flex items-center gap-1 desktop:opacity-0 desktop:transition-opacity desktop:group-hover:opacity-100 desktop:focus-within:opacity-100">
