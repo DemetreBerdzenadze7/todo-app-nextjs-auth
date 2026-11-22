@@ -11,12 +11,12 @@ export default function LoginBrandPanel() {
           <br />
           manage your tasks.
         </h2>
-        <p className="mt-4 max-w-sm text-body opacity-80">
+        <p className="mt-4 max-w-sm text-body">
           A personal task list with roles: users see their own tasks, admins see everyone&apos;s.
         </p>
       </div>
 
-      <p className="text-caption opacity-60">© 2026 Todo App</p>
+      <p className="text-caption">© 2026 Todo App</p>
     </section>
   );
 }
