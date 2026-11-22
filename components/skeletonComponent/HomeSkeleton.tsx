@@ -34,7 +34,7 @@ export default function HomeSkeleton() {
         </div>
 
         {/* Sidebar (desktop) */}
-        <aside className="hidden flex-col gap-6 desktop:flex">
+        <aside className="flex flex-col gap-6">
           <section className={`${card} flex flex-col gap-3 p-5`}>
             <Skeleton className="h-5 w-24" />
             <Skeleton className="h-3 w-32" />

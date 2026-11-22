@@ -34,7 +34,7 @@ async function GetUser() {
           <TodoList todos={userTodos} />
         </div>
 
-        <aside className="hidden flex-col gap-6 desktop:flex">
+        <aside className="flex flex-col gap-6">
           <ProgressCard total={total} done={done} />
           <RoleCard role={session.user.role} />
         </aside>

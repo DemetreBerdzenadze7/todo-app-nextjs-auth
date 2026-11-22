@@ -8,6 +8,6 @@ export async function getTodos(): Promise<Todos[]> {
   return JSON.parse(todos);
 }
 
-export async function saveTodos(todo: Todos) {
-  return await writeFile(pathFile, JSON.stringify(todo, null, 2));
+export async function saveTodos(todos: Todos[]) {
+  return await writeFile(pathFile, JSON.stringify(todos, null, 2));
 }
