@@ -10,32 +10,33 @@ import { redirect } from "next/navigation";
 import { Suspense, useMemo } from "react";
 import { getTodos } from "@/lib/tasks";
 import HomeSkeleton from "@/components/skeletonComponent/HomeSkeleton";
+import options from "./api/auth/[...nextauth]/option";
 
 async function GetUser() {
-  const session = await getServerSession();
+  const session = await getServerSession(options);
 
-  if (!session) redirect("/");
+  if (!session) redirect("/login");
   else if (session.user.role === "ADMIN") redirect("/admin");
 
   const todos = await getTodos();
-  const filteredTodos = todos.filter((todo) => todo.userId === session.user.id);
-  const total = filteredTodos.length;
-  const done = filteredTodos.filter((t) => t.done).length;
+  const userTodos = todos.filter((todo) => todo.userId === session.user.id);
+  const total = userTodos.length;
+  const done = userTodos.filter((t) => t.done).length;
 
   return (
     <main className="mx-auto w-full max-w-page flex-1 px-gutter py-6 tablet:px-gutter-tablet tablet:py-10">
-      <Greeting name="Giorgi" />
+      <Greeting name={session.user.name ?? ""} />
 
       <div className="grid gap-6 desktop:grid-cols-[1fr_20rem] desktop:items-start">
         <div className="flex flex-col gap-6">
           <Stats total={total} active={total - done} done={done} />
           <AddTodoForm />
-          <TodoList todos={filteredTodos} />
+          <TodoList todos={userTodos} />
         </div>
 
         <aside className="hidden flex-col gap-6 desktop:flex">
           <ProgressCard total={total} done={done} />
-          <RoleCard />
+          <RoleCard role={session.user.role} />
         </aside>
       </div>
     </main>

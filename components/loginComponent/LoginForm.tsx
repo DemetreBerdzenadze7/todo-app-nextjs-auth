@@ -84,7 +84,7 @@ export default function LoginForm() {
         </label>
 
         {isError && (
-          <p className="hidden rounded-control bg-danger-soft px-4 py-3 text-caption font-medium text-danger">
+          <p className="rounded-control bg-danger-soft px-4 py-3 text-caption font-medium text-danger">
             Invalid username or password
           </p>
         )}

@@ -1,4 +1,4 @@
-import StatCard from "./StatCard";
+import StatCard from "../sharedComponent/StatCard";
 
 type StatsProps = {
   total: number;
