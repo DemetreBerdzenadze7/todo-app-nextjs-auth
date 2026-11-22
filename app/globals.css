@@ -67,7 +67,7 @@
   --color-danger-soft: var(--danger-soft);
 
   /* Fonts */
-  --font-sans: var(--font-georgian), var(--font-geist-sans), system-ui, sans-serif;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
 

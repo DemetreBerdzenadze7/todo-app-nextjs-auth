@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_Georgian } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,21 +12,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const notoGeorgian = Noto_Sans_Georgian({
-  variable: "--font-georgian",
-  subsets: ["georgian"],
-});
-
 export const metadata: Metadata = {
   title: "Todo App",
-  description: "დავალებების მართვა როლებით",
+  description: "Task management with roles",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="ka"
-      className={`${notoGeorgian.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>

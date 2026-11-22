@@ -1,35 +1,35 @@
 [
   {
     "id": "1",
-    "title": "ადმინ პანელის შემოწმება",
+    "title": "Check the admin panel",
     "done": false,
     "userId": "1",
     "createdAt": "2026-11-22T11:00:00.000Z"
   },
   {
     "id": "2",
-    "title": "მომხმარებლების სიის გადახედვა",
+    "title": "Review the user list",
     "done": true,
     "userId": "1",
     "createdAt": "2026-11-22T11:10:00.000Z"
   },
   {
     "id": "3",
-    "title": "Next.js-ის პროექტის დასრულება",
+    "title": "Finish the Next.js project",
     "done": false,
     "userId": "2",
     "createdAt": "2026-11-22T12:00:00.000Z"
   },
   {
     "id": "4",
-    "title": "ავთენთიფიკაციის დამატება",
+    "title": "Add authentication",
     "done": false,
     "userId": "2",
     "createdAt": "2026-11-22T12:15:00.000Z"
   },
   {
     "id": "5",
-    "title": "Tailwind-ის დაყენება",
+    "title": "Set up Tailwind",
     "done": true,
     "userId": "2",
     "createdAt": "2026-11-22T12:30:00.000Z"

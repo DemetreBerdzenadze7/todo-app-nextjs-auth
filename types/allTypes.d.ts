@@ -7,3 +7,11 @@ interface AllUser {
   password: string;
   role: Role;
 }
+
+interface Todos {
+  id: string;
+  title: string;
+  done: boolean;
+  userId: string;
+  createdAt: string;
+}
